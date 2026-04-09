@@ -102,6 +102,7 @@ variable "owner" {
 variable "my_ip" {
   description = "Your IP address for SSH access"
   type        = string
+  default     = "0.0.0.0"
 }
 
 variable "private_subnet_cidr_2" {
