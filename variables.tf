@@ -46,11 +46,13 @@ variable "instance_type" {
 variable "ami_id" {
   description = "AMI ID for EC2 instances"
   type        = string
+  default     = "ami-0c456f2cfcc96df82"
 }
 
 variable "key_pair_name" {
   description = "Name of the SSH key pair for EC2 access"
   type        = string
+  default     = "terraform-aws-infra"
 }
 
 # Database
