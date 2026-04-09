@@ -77,10 +77,10 @@ data "aws_ami" "nat" {
 }
 
 resource "aws_instance" "nat" {
-  ami                         = data.aws_ami.nat.id
-  instance_type               = "t2.micro"
-  subnet_id                   = aws_subnet.public.id
-  source_dest_check           = false
+  ami               = data.aws_ami.nat.id
+  instance_type     = "t2.micro"
+  subnet_id         = aws_subnet.public.id
+  source_dest_check = false
 
   tags = {
     Name        = "${var.project_name}-${var.environment}-nat-instance"
